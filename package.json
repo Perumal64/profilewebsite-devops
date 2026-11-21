@@ -1,0 +1,13 @@
+{
+  "name": "profile-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Personal profile website (HTML, CSS, vanilla JS) with a GitHub Actions CI/CD pipeline.",
+  "scripts": {
+    "check": "node scripts/check-site.mjs",
+    "lint:html": "npx --yes htmlhint@1.1.4 index.html",
+    "lint:css": "npx --yes stylelint@16.10.0 \"css/*.css\"",
+    "lint:js": "node --check js/main.js",
+    "test": "npm run check && npm run lint:js && npm run lint:html && npm run lint:css"
+  }
+}
