@@ -1,0 +1,54 @@
+name: Workflow Notifications
+
+on:
+  workflow_run:
+    workflows:
+      - Validate Website
+      - Pull Request Checks
+      - Deploy to GitHub Pages
+      - Lighthouse Audit
+    types: [completed]
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  notify:
+    name: Report the result
+    runs-on: ubuntu-latest
+    steps:
+      - name: Write a run summary
+        env:
+          WF_NAME: ${{ github.event.workflow_run.name }}
+          WF_RESULT: ${{ github.event.workflow_run.conclusion }}
+          WF_BRANCH: ${{ github.event.workflow_run.head_branch }}
+          WF_SHA: ${{ github.event.workflow_run.head_sha }}
+          WF_URL: ${{ github.event.workflow_run.html_url }}
+        run: |
+          {
+            echo "## Workflow notification"
+            echo "- Workflow: $WF_NAME"
+            echo "- Result: $WF_RESULT"
+            echo "- Branch: $WF_BRANCH"
+            echo "- Commit: $WF_SHA"
+            echo "- Run: $WF_URL"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Open an issue when a run on main or develop fails
+        if: github.event.workflow_run.conclusion == 'failure' && contains(fromJSON('["main","develop"]'), github.event.workflow_run.head_branch)
+        env:
+          GH_TOKEN: ${{ github.token }}
+          WF_NAME: ${{ github.event.workflow_run.name }}
+          WF_BRANCH: ${{ github.event.workflow_run.head_branch }}
+          WF_SHA: ${{ github.event.workflow_run.head_sha }}
+          WF_URL: ${{ github.event.workflow_run.html_url }}
+        run: |
+          title="CI failed: ${WF_NAME} on ${WF_BRANCH}"
+          open=$(gh issue list --repo "$GITHUB_REPOSITORY" --state open --search "\"$title\" in:title" --json number --jq 'length')
+          if [ "$open" = "0" ]; then
+            gh issue create --repo "$GITHUB_REPOSITORY" --title "$title" \
+              --body "The workflow **${WF_NAME}** failed on \`${WF_BRANCH}\` at commit \`${WF_SHA}\`. Run: ${WF_URL}"
+          else
+            echo "An open issue for this failure already exists."
+          fi
