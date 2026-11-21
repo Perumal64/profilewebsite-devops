@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" role="img" aria-label="Stadium floodlights over a cricket pitch with stumps, bat and ball">
+  <defs>
+    <linearGradient id="night" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#04201f"/><stop offset="1" stop-color="#0f5a4a"/></linearGradient>
+    <radialGradient id="lamp" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#ffffff" stop-opacity="0.95"/><stop offset="0.4" stop-color="#ffe9a0" stop-opacity="0.4"/><stop offset="1" stop-color="#ffe9a0" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="400" height="500" fill="url(#night)"/>
+  <circle cx="70" cy="90" r="80" fill="url(#lamp)"/><circle cx="330" cy="90" r="80" fill="url(#lamp)"/>
+  <g fill="#ffffff"><rect x="50" y="80" width="40" height="22" rx="3"/><rect x="310" y="80" width="40" height="22" rx="3"/></g>
+  <g stroke="#0a2a26" stroke-width="6"><line x1="70" y1="102" x2="70" y2="300"/><line x1="330" y1="102" x2="330" y2="300"/></g>
+  <ellipse cx="200" cy="350" rx="260" ry="70" fill="#1f8a5f"/>
+  <rect x="150" y="300" width="100" height="170" fill="#d9b779" opacity="0.9" transform="skewX(0)"/>
+  <g fill="#fff1c9">
+    <rect x="176" y="270" width="6" height="90" rx="3"/><rect x="197" y="270" width="6" height="90" rx="3"/><rect x="218" y="270" width="6" height="90" rx="3"/>
+    <rect x="180" y="266" width="18" height="4" rx="2" transform="rotate(-8 189 268)"/><rect x="202" y="266" width="18" height="4" rx="2" transform="rotate(8 211 268)"/>
+  </g>
+  <g transform="rotate(24 120 380)">
+    <rect x="108" y="300" width="26" height="110" rx="10" fill="#e8c37a"/><rect x="116" y="410" width="10" height="50" rx="4" fill="#5b3a21"/>
+  </g>
+  <circle cx="290" cy="420" r="16" fill="#c4302b"/><path d="M276 416 Q290 408 304 416 M276 424 Q290 432 304 424" stroke="#ffffff" stroke-width="2" fill="none"/>
+  <text x="200" y="470" text-anchor="middle" font-family="Georgia, serif" font-size="40" font-weight="700" letter-spacing="8" fill="#ffffff">JERSEY</text>
+  <text x="200" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" letter-spacing="3" fill="#ffe9a0">NEVER TOO LATE TO PLAY</text>
+</svg>

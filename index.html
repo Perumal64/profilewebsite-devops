@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,7 +10,8 @@
   <meta property="og:description" content="Journey, skills, interests, family and hobbies of Perumal S.">
   <meta property="og:type" content="website">
   <title>Perumal S | Software Engineer</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232c3e50'/%3E%3Ctext x='32' y='43' font-size='28' font-family='Georgia' font-weight='700' text-anchor='middle' fill='%23ffffff'%3EPS%3C/text%3E%3C/svg%3E">
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232c3e50'/%3E%3Ctext x='32' y='43' font-size='28' font-family='Georgia' font-weight='700' text-anchor='middle' fill='%23ffffff'%3EPS%3C/text%3E%3C/svg%3E">
   <script>
     try {
       var saved = localStorage.getItem('theme');
@@ -17,11 +19,17 @@
       document.documentElement.setAttribute('data-theme', saved || (dark ? 'dark' : 'light'));
     } catch (e) { document.documentElement.setAttribute('data-theme', 'light'); }
   </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&display=swap">
   <link rel="stylesheet" href="css/theme.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"></div>
   <header class="nav">
     <nav class="container nav-inner" aria-label="Main">
       <a class="logo" href="#hero">Perumal S</a>
@@ -30,6 +38,7 @@
         <li><a href="#journey">Journey</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#interests">Interests</a></li>
+        <li><a href="#favourites">Favourites</a></li>
         <li><a href="#family">Family</a></li>
         <li><a href="#hobbies">Hobbies</a></li>
         <li><a href="#footer">Contact</a></li>
@@ -44,13 +53,28 @@
   <main id="main">
     <section id="hero" class="hero">
       <div class="hero-inner">
-        <img class="avatar" src="images/hero/profile.jpeg" alt="Portrait of Perumal S" width="160" height="160">
-        <h1>Perumal S</h1>
-        <p class="tagline">Software Engineer | Data Enthusiast | Cricket Lover</p>
-        <div class="hero-actions">
-          <a class="btn" href="#journey">Explore My Journey &rarr;</a>
-          <a class="btn btn-outline" href="#footer">Get in touch</a>
+        <div class="hero-copy">
+          <p class="status"><span class="status-dot" aria-hidden="true"></span>Open to fresher roles in data and
+            software</p>
+          <h1>Perumal S</h1>
+          <p class="tagline">Software Engineer | Data Enthusiast | Cricket Lover</p>
+          <p class="hero-lead">I build things with Python, SQL and Azure, and I like turning messy data into
+            something people can actually use.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#journey">Explore My Journey &rarr;</a>
+            <a class="btn btn-outline" href="#footer">Get in touch</a>
+          </div>
         </div>
+        <figure class="hero-photo">
+          <div class="photo-frame">
+            <img class="avatar" src="images/hero/profile-photo.jpg"
+              alt="Perumal S standing in front of a wall covered with blooming pink bougainvillea" width="900"
+              height="1200" fetchpriority="high">
+          </div>
+          <span class="photo-chip chip-one" aria-hidden="true">Data enthusiast</span>
+          <span class="photo-chip chip-two" aria-hidden="true">Cricket lover</span>
+          <figcaption class="photo-note">Coimbatore, Tamil Nadu</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -62,41 +86,50 @@
             <span class="period">2021&ndash;2025</span>
             <h3>B.E. CSE (Internet of Things &amp; Cyber Security)</h3>
             <p class="org">SNS College of Engineering</p>
-            <p class="desc">Completed my engineering degree, building a foundation in programming, networks, IoT and cyber security.</p>
+            <p class="desc">Completed my engineering degree, building a foundation in programming, networks, IoT and
+              cyber security.</p>
           </article>
           <article class="milestone reveal">
             <span class="period">2024</span>
             <h3>Product Development Intern</h3>
             <p class="org">Mindful AI-NSDC</p>
-            <p class="desc collapsed">Worked on web development and application lifecycle management: defining technical requirements, designing user-centric workflows and collaborating with cross-functional teams. Also analysed the market and competitor web technologies and optimised front-end and back-end workflows.</p>
+            <p class="desc collapsed">Worked on web development and application lifecycle management: defining technical
+              requirements, designing user-centric workflows and collaborating with cross-functional teams. Also
+              analysed the market and competitor web technologies and optimised front-end and back-end workflows.</p>
             <button class="more-btn" type="button">Show more</button>
           </article>
           <article class="milestone reveal">
             <span class="period">2025</span>
             <h3>AppsForm Developer Intern</h3>
             <p class="org">Claysys Technologies</p>
-            <p class="desc collapsed">Designed and built dynamic, user-friendly application forms and workflows. Created responsive interfaces and implemented form validations through SQL and its data source connections.</p>
+            <p class="desc collapsed">Designed and built dynamic, user-friendly application forms and workflows. Created
+              responsive interfaces and implemented form validations through SQL and its data source connections.</p>
             <button class="more-btn" type="button">Show more</button>
           </article>
           <article class="milestone reveal">
             <span class="period">2025</span>
             <h3>Fake URL Detection using Deep Learning</h3>
             <p class="org">Project</p>
-            <p class="desc collapsed">Built a deep learning system that analyses and classifies URLs as legitimate or fraudulent, to protect users from phishing attacks and online fraud.</p>
+            <p class="desc collapsed">Built a deep learning system that analyses and classifies URLs as legitimate or
+              fraudulent, to protect users from phishing attacks and online fraud.</p>
             <button class="more-btn" type="button">Show more</button>
           </article>
           <article class="milestone reveal">
             <span class="period">2026</span>
             <h3>Image Classification &amp; Data Training Pipeline</h3>
             <p class="org">Project on Microsoft Azure</p>
-            <p class="desc collapsed">Designed a cloud pipeline that categorises objects and scenes from raw image datasets. Collected and preprocessed data with Azure Blob Storage and trained the model on Azure Databricks.</p>
+            <p class="desc collapsed">Designed a cloud pipeline that categorises objects and scenes from raw image
+              datasets. Collected and preprocessed data with Azure Blob Storage and trained the model on Azure
+              Databricks.</p>
             <button class="more-btn" type="button">Show more</button>
           </article>
           <article class="milestone reveal">
             <span class="period">Present</span>
             <h3>Fresher, ready to start my career</h3>
             <p class="org">Coimbatore, Tamil Nadu</p>
-            <p class="desc collapsed">Skilled in Python, SQL, JavaScript, system design, Azure, REST APIs, Excel and Power BI. Certified through the Deloitte Data Analytics Job Simulation and IBM courses in Cloud Computing, GenAI Essentials and Cyber Security.</p>
+            <p class="desc collapsed">Skilled in Python, SQL, JavaScript, system design, Azure, REST APIs, Excel and
+              Power BI. Certified through the Deloitte Data Analytics Job Simulation and IBM courses in Cloud Computing,
+              GenAI Essentials and Cyber Security.</p>
             <button class="more-btn" type="button">Show more</button>
           </article>
         </div>
@@ -157,27 +190,177 @@
       </div>
     </section>
 
+    <section id="favourites" class="section fav">
+      <div class="container">
+        <h2 class="section-title">My Favourites</h2>
+
+        <div class="fav-block movies reveal">
+          <h3 class="fav-heading">Movies I keep coming back to</h3>
+          <input class="mv-radio" type="radio" name="movie" id="mv-dark-knight" checked>
+          <input class="mv-radio" type="radio" name="movie" id="mv-meiyazhagan">
+          <input class="mv-radio" type="radio" name="movie" id="mv-jersey">
+          <input class="mv-radio" type="radio" name="movie" id="mv-interstellar">
+          <div class="mv-tabs">
+            <label for="mv-dark-knight">The Dark Knight</label>
+            <label for="mv-meiyazhagan">Meiyazhagan</label>
+            <label for="mv-jersey">Jersey</label>
+            <label for="mv-interstellar">Interstellar</label>
+          </div>
+          <div class="mv-panels">
+            <article class="mv-panel panel-dark-knight">
+              <img src="images/interests/movie-dark-knight.svg"
+                alt="Illustration of a night city skyline under a glowing searchlight" width="400" height="500"
+                loading="lazy">
+              <div class="mv-info">
+                <h4>The Dark Knight</h4>
+                <ul class="mv-facts">
+                  <li>2008</li>
+                  <li>Christopher Nolan</li>
+                  <li>Crime thriller</li>
+                </ul>
+                <p>A hero tested by a villain who wants to prove that anyone can break. Every scene asks the same
+                  question: what would you choose when there is no good option? The Joker still gives me chills.</p>
+              </div>
+            </article>
+            <article class="mv-panel panel-meiyazhagan">
+              <img src="images/interests/movie-meiyazhagan.svg"
+                alt="Illustration of a village sunset with a temple tower, palm trees and a bicycle" width="400"
+                height="500" loading="lazy">
+              <div class="mv-info">
+                <h4>Meiyazhagan</h4>
+                <ul class="mv-facts">
+                  <li>2024</li>
+                  <li>C. Prem Kumar</li>
+                  <li>Tamil drama</li>
+                </ul>
+                <p>A warm, quiet film about going back home and the kindness of the people who remember you. It
+                  made me think about relatives, villages and how much a simple hello can mean.</p>
+              </div>
+            </article>
+            <article class="mv-panel panel-jersey">
+              <img src="images/interests/movie-jersey.svg"
+                alt="Illustration of stadium floodlights over a cricket pitch with stumps, a bat and a ball" width="400"
+                height="500" loading="lazy">
+              <div class="mv-info">
+                <h4>Jersey</h4>
+                <ul class="mv-facts">
+                  <li>2019</li>
+                  <li>Gowtham Tinnanuri</li>
+                  <li>Telugu sports drama</li>
+                </ul>
+                <p>A man who gave up cricket gets one more chance to wear the jersey. It is about patience, family
+                  and proving something to the one person who matters. As a cricket fan, it hits home.</p>
+              </div>
+            </article>
+            <article class="mv-panel panel-interstellar">
+              <img src="images/interests/movie-interstellar.svg"
+                alt="Illustration of a black hole with a glowing ring in deep space" width="400" height="500"
+                loading="lazy">
+              <div class="mv-info">
+                <h4>Interstellar</h4>
+                <ul class="mv-facts">
+                  <li>2014</li>
+                  <li>Christopher Nolan</li>
+                  <li>Science fiction</li>
+                </ul>
+                <p>Space, time and a father's promise to come back. The science is huge, yet the emotion is what
+                  stays with me, and that organ music is unforgettable.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="fav-block cricket reveal">
+          <h3 class="fav-heading">Cricket: MS Dhoni, the finisher</h3>
+          <div class="cricket-grid">
+            <div class="video-frame">
+              <iframe src="https://www.youtube-nocookie.com/embed/ybi99XTZOxg" title="MS Dhoni cricket video"
+                loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
+            </div>
+            <aside class="cricket-card">
+              <img src="images/interests/cricket-dhoni.svg"
+                alt="Illustration of the number seven on a blue background with a bat swing and ball trail" width="400"
+                height="500" loading="lazy">
+              <div class="cricket-text">
+                <p>Dhoni is why I love a tense run chase. He stays calm, trusts the plan and finishes the job. I try
+                  to bring the same calm to my own deadlines.</p>
+                <ul class="traits">
+                  <li>Stays calm</li>
+                  <li>Backs his plan</li>
+                  <li>Finishes games</li>
+                </ul>
+                <a class="btn" href="https://www.youtube.com/watch?v=ybi99XTZOxg" target="_blank"
+                  rel="noopener noreferrer">Watch on YouTube</a>
+              </div>
+            </aside>
+          </div>
+        </div>
+
+        <div class="fav-block book reveal">
+          <h3 class="fav-heading">Book I recommend: Atomic Habits</h3>
+          <div class="book-grid">
+            <figure class="book3d">
+              <div class="book-body">
+                <img src="images/interests/book-atomic-habits.svg"
+                  alt="Atomic Habits cover illustration with small blocks growing into a staircase" width="400"
+                  height="500" loading="lazy">
+              </div>
+              <figcaption class="book-by">by James Clear</figcaption>
+            </figure>
+            <div class="book-info">
+              <p>The big idea: get just 1% better each day and the small wins pile up. Instead of chasing huge goals,
+                you build tiny habits that fit into your day, like practising SQL for ten minutes after breakfast.</p>
+              <fieldset class="habit-list">
+                <legend>The four laws. Tick the ones you used today.</legend>
+                <label class="habit"><input type="checkbox"><span>Make it obvious</span></label>
+                <label class="habit"><input type="checkbox"><span>Make it attractive</span></label>
+                <label class="habit"><input type="checkbox"><span>Make it easy</span></label>
+                <label class="habit"><input type="checkbox"><span>Make it satisfying</span></label>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="family" class="section">
       <div class="container">
         <h2 class="section-title">Family</h2>
-        <img class="banner" src="images/family/family-banner.svg" alt="Family banner placeholder" width="1200" height="260" loading="lazy">
+        <img class="banner" src="images/family/family-banner.svg" alt="Family banner placeholder" width="1200"
+          height="260" loading="lazy">
         <div class="grid">
           <article class="flip-card" tabindex="0" role="button" aria-pressed="false">
             <div class="flip-inner">
-              <div class="flip-front"><img src="images/family/me.svg" alt="Perumal"><h3>Me</h3></div>
-              <div class="flip-back"><h3>Me</h3><p>Always learning, always building, and grateful for the people who got me here.</p></div>
+              <div class="flip-front"><img src="images/family/me.svg" alt="Perumal">
+                <h3>Me</h3>
+              </div>
+              <div class="flip-back">
+                <h3>Me</h3>
+                <p>Always learning, always building, and grateful for the people who got me here.</p>
+              </div>
             </div>
           </article>
           <article class="flip-card" tabindex="0" role="button" aria-pressed="false">
             <div class="flip-inner">
-              <div class="flip-front"><img src="images/family/mother.svg" alt="My mother"><h3>My Mother</h3></div>
-              <div class="flip-back"><h3>My Mother</h3><p>The heart of our home and my biggest support in everything I do.</p></div>
+              <div class="flip-front"><img src="images/family/mother.svg" alt="My mother">
+                <h3>My Mother</h3>
+              </div>
+              <div class="flip-back">
+                <h3>My Mother</h3>
+                <p>The heart of our home and my biggest support in everything I do.</p>
+              </div>
             </div>
           </article>
           <article class="flip-card" tabindex="0" role="button" aria-pressed="false">
             <div class="flip-inner">
-              <div class="flip-front"><img src="images/family/brother.svg" alt="My younger brother"><h3>My Younger Brother</h3></div>
-              <div class="flip-back"><h3>My Younger Brother</h3><p>My partner in fun, and the reason I try to set a good example.</p></div>
+              <div class="flip-front"><img src="images/family/brother.svg" alt="My younger brother">
+                <h3>My Younger Brother</h3>
+              </div>
+              <div class="flip-back">
+                <h3>My Younger Brother</h3>
+                <p>My partner in fun, and the reason I try to set a good example.</p>
+              </div>
             </div>
           </article>
         </div>
@@ -188,16 +371,23 @@
       <div class="container">
         <h2 class="section-title">Hobbies &amp; Passions</h2>
         <div class="gallery">
-          <button class="hobby" type="button" aria-haspopup="dialog" data-title="Cricket" data-text="Cricket is my favourite way to unwind. I love the teamwork, the strategy and the thrill of a close finish.">
-            <img src="images/hobbies/cricket.svg" alt="Cricket bat illustration">
+
+          <button class="hobby" type="button" aria-haspopup="dialog" data-title="Cricket"
+            data-text="Cricket is my favourite way to unwind. I love the teamwork, the strategy and the thrill of a close finish.">
+            <img src="images/interests/cricket-dhoni.svg" alt="Cricket illustration with the number seven" width="400"
+              height="500" loading="lazy">
             <span class="hobby-label">Cricket</span>
           </button>
-          <button class="hobby" type="button" aria-haspopup="dialog" data-title="Movies &amp; Documentaries" data-text="I enjoy watching movies for the storytelling and documentaries for the real-world ideas they bring to life.">
-            <img src="images/hobbies/movies.svg" alt="Clapperboard illustration">
+          <button class="hobby" type="button" aria-haspopup="dialog" data-title="Movies &amp; Documentaries"
+            data-text="I enjoy watching movies for the storytelling and documentaries for the real-world ideas they bring to life.">
+            <img src="images/interests/movie-interstellar.svg" alt="Black hole movie illustration" width="400"
+              height="500" loading="lazy">
             <span class="hobby-label">Movies &amp; Documentaries</span>
           </button>
-          <button class="hobby" type="button" aria-haspopup="dialog" data-title="Reading" data-text="Books let me learn at my own pace. Reading keeps me curious and helps me think more clearly.">
-            <img src="images/hobbies/books.svg" alt="Stack of books illustration">
+          <button class="hobby" type="button" aria-haspopup="dialog" data-title="Reading"
+            data-text="Books let me learn at my own pace. Reading keeps me curious and helps me think more clearly.">
+            <img src="images/interests/book-atomic-habits.svg" alt="Atomic Habits book illustration" width="400"
+              height="500" loading="lazy">
             <span class="hobby-label">Reading</span>
           </button>
         </div>
@@ -218,14 +408,17 @@
     <div class="container">
       <div class="social">
         <a href="https://www.linkedin.com/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="https://github.com/sivaperumal64" aria-label="GitHub" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://github.com/sivaperumal64" aria-label="GitHub" target="_blank"
+          rel="noopener noreferrer">GitHub</a>
         <a href="mailto:sivaperumal062004@gmail.com" aria-label="Email">Email</a>
       </div>
       <button id="top-btn" class="btn" type="button">Back to top &uarr;</button>
-      <p class="footer-note">&copy; <span id="year">2026</span> Perumal S. Built with HTML, CSS and vanilla JavaScript.</p>
+      <p class="footer-note">&copy; <span id="year">2026</span> Perumal S. Built with HTML, CSS and vanilla JavaScript.
+      </p>
     </div>
   </footer>
 
   <script src="js/main.js"></script>
 </body>
+
 </html>

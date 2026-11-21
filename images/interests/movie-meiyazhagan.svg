@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" role="img" aria-label="Village sunset with a temple tower, palm trees and a bicycle">
+  <defs>
+    <linearGradient id="sun" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3b1f4a"/><stop offset="0.45" stop-color="#c2415a"/><stop offset="0.8" stop-color="#f59e4b"/><stop offset="1" stop-color="#fcd98b"/></linearGradient>
+  </defs>
+  <rect width="400" height="500" fill="url(#sun)"/>
+  <circle cx="200" cy="290" r="70" fill="#ffe7a8" opacity="0.9"/>
+  <g fill="#2a1420">
+    <polygon points="150,380 250,380 244,352 238,352 232,326 226,326 220,300 214,300 208,272 192,272 186,300 180,300 174,326 168,326 162,352 156,352"/>
+    <rect x="196" y="256" width="8" height="18"/>
+    <rect x="0" y="380" width="400" height="120"/>
+  </g>
+  <g stroke="#2a1420" stroke-width="7" fill="none" stroke-linecap="round">
+    <path d="M60 380 Q64 320 52 270"/><path d="M340 380 Q336 330 350 280"/>
+  </g>
+  <g stroke="#2a1420" stroke-width="5" fill="none" stroke-linecap="round">
+    <path d="M52 270 Q20 262 8 286"/><path d="M52 270 Q40 238 14 238"/><path d="M52 270 Q84 258 100 282"/><path d="M52 270 Q70 240 98 244"/>
+    <path d="M350 280 Q320 272 306 296"/><path d="M350 280 Q336 250 312 248"/><path d="M350 280 Q382 268 396 292"/><path d="M350 280 Q366 250 392 252"/>
+  </g>
+  <g stroke="#fcd98b" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="130" cy="420" r="26"/><circle cx="230" cy="420" r="26"/>
+    <path d="M130 420 L172 394 L208 420 M172 394 L156 394 M172 394 L190 420 L130 420 M208 420 L230 420 M208 420 L200 386 L212 386"/>
+  </g>
+  <text x="200" y="468" text-anchor="middle" font-family="Georgia, serif" font-size="30" font-weight="700" letter-spacing="3" fill="#fff4dc">MEIYAZHAGAN</text>
+  <text x="200" y="490" text-anchor="middle" font-family="'Noto Sans Tamil', 'Latha', sans-serif" font-size="14" fill="#fcd98b">மெய்யழகன்</text>
+</svg>
