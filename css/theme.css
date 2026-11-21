@@ -3,57 +3,42 @@
    Change a value here and the whole site follows.
    Light is the default; [data-theme="dark"] overrides colours.
    ===================================================== */
+
 :root {
   /* Primary Colors */
-  --color-primary: #2c3e50;
-  --color-primary-light: #3498db;
-  --color-primary-dark: #1a252f;
-  --color-heading: #2c3e50;
+  --color-primary: #70452f;
+  --color-primary-light: #c08457;
+  --color-primary-dark: #4a2c20;
+  --color-heading: #70452f;
 
   /* Background Colors */
-  --color-bg: #ffffff;
-  --color-bg-secondary: #f8f9fa;
-  --color-bg-card: #ffffff;
+  --color-bg: #faf3e8;
+  --color-bg-secondary: #f3e7d5;
+  --color-bg-card: #fffaf2;
 
   /* Text Colors */
-  --color-text: #2c3e50;
-  --color-text-secondary: #5c6670;
+  --color-text: #382b25;
+  --color-text-secondary: #78675b;
   --color-text-inverse: #ffffff;
-  --color-link: #1a6fa8;
+  --color-link: #995b32;
 
   /* Accent & Borders */
-  --color-accent: #c0392b;
+  --color-accent: #c47b45;
   --color-on-accent: #ffffff;
-  --color-border: #dee2e6;
-  --color-shadow: rgba(0, 0, 0, 0.1);
-  --color-overlay: rgba(0, 0, 0, 0.8);
+  --color-border: #e5d4c2;
+  --color-shadow: rgba(80, 50, 30, 0.12);
+  --color-overlay: rgba(40, 25, 15, 0.8);
 
   /* Family section warm sub-palette */
-  --family-bg: #fff4e6;
-  --family-card: #ffffff;
+  --family-bg: #f5e5d0;
+  --family-card: #fffaf2;
   --family-text: #5d4037;
-  --family-accent: #b45309;
-  --family-border: #f3d5b5;
+  --family-accent: #a65d2e;
+  --family-border: #e4c6a5;
 
-  /* Typography */
-  --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  --font-heading: 'Georgia', serif;
-  --font-size-base: 16px;
-  --font-size-h1: 2.5rem;
-  --font-size-h2: 2rem;
-  --font-size-h3: 1.25rem;
-
-  /* Spacing */
-  --spacing-sm: 0.5rem;
-  --spacing-md: 1rem;
-  --spacing-lg: 2rem;
-  --spacing-xl: 4rem;
-
-  /* Layout */
-  --max-width: 1200px;
-  --border-radius: 8px;
-  --transition-speed: 0.3s;
+  /* Keep your existing typography, spacing and layout variables below */
 }
+
 
 [data-theme="dark"] {
   --color-primary: #243447;
