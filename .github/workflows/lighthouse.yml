@@ -1,0 +1,49 @@
+
+name: Lighthouse Audit
+
+on:
+  workflow_run:
+    workflows:
+      - Deploy to GitHub Pages
+    types: [completed]
+  workflow_dispatch:
+  schedule:
+    - cron: '0 2 * * 1'
+
+permissions:
+  contents: read
+
+jobs:
+  lighthouse:
+    name: Audit the live site
+    if: github.event_name == 'workflow_dispatch' || github.event_name == 'schedule' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Work out the live URL
+        id: url
+        env:
+          OWNER: ${{ github.repository_owner }}
+          REPO: ${{ github.event.repository.name }}
+        run: |
+          owner="${OWNER,,}"
+          if [ "${REPO,,}" = "${owner}.github.io" ]; then
+            echo "site=https://${owner}.github.io/" >> "$GITHUB_OUTPUT"
+          else
+            echo "site=https://${owner}.github.io/${REPO}/" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Wait until the site responds
+        env:
+          SITE: ${{ steps.url.outputs.site }}
+        run: curl --retry 6 --retry-delay 10 --retry-all-errors -fsS -o /dev/null "$SITE"
+
+      - name: Run Lighthouse
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          urls: ${{ steps.url.outputs.site }}
+          configPath: ./lighthouserc.json
+          uploadArtifacts: true
+          temporaryPublicStorage: true

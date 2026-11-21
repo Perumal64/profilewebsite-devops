@@ -1,0 +1,83 @@
+/* =====================================================
+   THEME: the ONLY file that contains colours, fonts and sizes.
+   Change a value here and the whole site follows.
+   Light is the default; [data-theme="dark"] overrides colours.
+   ===================================================== */
+:root {
+  /* Primary Colors */
+  --color-primary: #2c3e50;
+  --color-primary-light: #3498db;
+  --color-primary-dark: #1a252f;
+  --color-heading: #2c3e50;
+
+  /* Background Colors */
+  --color-bg: #ffffff;
+  --color-bg-secondary: #f8f9fa;
+  --color-bg-card: #ffffff;
+
+  /* Text Colors */
+  --color-text: #2c3e50;
+  --color-text-secondary: #5c6670;
+  --color-text-inverse: #ffffff;
+  --color-link: #1a6fa8;
+
+  /* Accent & Borders */
+  --color-accent: #c0392b;
+  --color-on-accent: #ffffff;
+  --color-border: #dee2e6;
+  --color-shadow: rgba(0, 0, 0, 0.1);
+  --color-overlay: rgba(0, 0, 0, 0.8);
+
+  /* Family section warm sub-palette */
+  --family-bg: #fff4e6;
+  --family-card: #ffffff;
+  --family-text: #5d4037;
+  --family-accent: #b45309;
+  --family-border: #f3d5b5;
+
+  /* Typography */
+  --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-heading: 'Georgia', serif;
+  --font-size-base: 16px;
+  --font-size-h1: 2.5rem;
+  --font-size-h2: 2rem;
+  --font-size-h3: 1.25rem;
+
+  /* Spacing */
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 4rem;
+
+  /* Layout */
+  --max-width: 1200px;
+  --border-radius: 8px;
+  --transition-speed: 0.3s;
+}
+
+[data-theme="dark"] {
+  --color-primary: #243447;
+  --color-primary-light: #4aa3e8;
+  --color-primary-dark: #0b1219;
+  --color-heading: #e6edf3;
+
+  --color-bg: #0f1720;
+  --color-bg-secondary: #16212d;
+  --color-bg-card: #1b2836;
+
+  --color-text: #e6edf3;
+  --color-text-secondary: #9fb0c0;
+  --color-link: #6cb6ff;
+
+  --color-accent: #ff8a7a;
+  --color-on-accent: #0f1720;
+  --color-border: #2d3b4b;
+  --color-shadow: rgba(0, 0, 0, 0.5);
+  --color-overlay: rgba(0, 0, 0, 0.85);
+
+  --family-bg: #241a14;
+  --family-card: #33261d;
+  --family-text: #f0e0d0;
+  --family-accent: #f0a15a;
+  --family-border: #5a4331;
+}
