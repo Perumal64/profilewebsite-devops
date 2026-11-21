@@ -1,0 +1,60 @@
+name: Pull Request Checks
+
+on:
+  pull_request:
+    branches: [main, develop]
+    types: [opened, edited, synchronize, reopened]
+
+permissions:
+  contents: read
+
+jobs:
+  conventions:
+    name: Branch name, PR title and file size
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check branch name
+        env:
+          HEAD_REF: ${{ github.head_ref }}
+        run: |
+          if [[ "$HEAD_REF" == "develop" ]] || [[ "$HEAD_REF" =~ ^(feature|theme|ci|fix|docs|chore)/[a-z0-9][a-z0-9._-]*$ ]]; then
+            echo "Branch name OK: $HEAD_REF"
+          else
+            echo "::error::Branch '$HEAD_REF' must look like feature/<name>, theme/<name>, ci/<name>, fix/<name>, docs/<name> or chore/<name> (lowercase)."
+            exit 1
+          fi
+
+      - name: Check PR title
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}
+        run: |
+          if [[ "$PR_TITLE" =~ ^(feat|fix|docs|style|refactor|ci|chore|theme)(\([a-z0-9-]+\))?:\ .+ ]]; then
+            echo "PR title OK: $PR_TITLE"
+          else
+            echo "::error::PR title must follow 'type: summary', for example 'feat: add skills section'."
+            exit 1
+          fi
+
+      - name: Block oversized files (over 2 MB)
+        run: |
+          big=$(find . -path ./.git -prune -o -type f -size +2M -print)
+          if [ -n "$big" ]; then
+            echo "::error::These files are over 2 MB. Compress them before merging:"
+            echo "$big"
+            exit 1
+          fi
+
+      - name: Summarise changed files
+        env:
+          BASE_REF: ${{ github.base_ref }}
+        run: |
+          {
+            echo "## Files changed in this pull request"
+            echo '```'
+            git diff --name-status "origin/${BASE_REF}...HEAD"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
