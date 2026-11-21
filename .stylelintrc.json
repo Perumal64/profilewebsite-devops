@@ -1,0 +1,24 @@
+{
+  "rules": {
+    "block-no-empty": true,
+    "color-no-invalid-hex": true,
+    "comment-no-empty": true,
+    "declaration-block-no-duplicate-properties": [true, { "ignore": ["consecutive-duplicates-with-different-values"] }],
+    "font-family-no-duplicate-names": true,
+    "no-duplicate-selectors": true,
+    "no-invalid-double-slash-comments": true,
+    "unit-no-unknown": true,
+    "selector-pseudo-element-no-unknown": true,
+    "color-no-hex": true,
+    "function-disallowed-list": ["rgb", "rgba", "hsl", "hsla"]
+  },
+  "overrides": [
+    {
+      "files": ["css/theme.css"],
+      "rules": {
+        "color-no-hex": null,
+        "function-disallowed-list": null
+      }
+    }
+  ]
+}
