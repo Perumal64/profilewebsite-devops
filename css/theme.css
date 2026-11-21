@@ -36,7 +36,38 @@
   --family-accent: #a65d2e;
   --family-border: #e4c6a5;
 
-  /* Keep your existing typography, spacing and layout variables below */
+  /* Bloom accent (pulled from the hero photo) and glass surfaces */
+  --color-bloom: #c9246b;
+  --color-bloom-soft: #ff7eb0;
+  --color-bloom-glow: rgba(201, 36, 107, 0.38);
+  --color-nav-bg: rgba(250, 243, 232, 0.86);
+  --color-glass: rgba(255, 255, 255, 0.08);
+  --color-glass-strong: rgba(255, 255, 255, 0.16);
+  --color-glass-border: rgba(255, 255, 255, 0.2);
+
+  /* Favourites "stage" section (always dark, in both themes) */
+  --color-stage: #2b1810;
+  --color-stage-deep: #170c07;
+  --color-stage-accent: #f4b26f;
+  --color-on-stage: #fff7ec;
+  --color-on-stage-muted: #e4cfb8;
+
+  /* Typography, spacing and layout */
+  --font-primary: 'DM Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-heading: 'Bricolage Grotesque', 'Segoe UI', Tahoma, sans-serif;
+  --font-size-base: 16px;
+  --font-size-h1: 2.5rem;
+  --font-size-h2: 2rem;
+  --font-size-h3: 1.25rem;
+
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 5rem;
+
+  --max-width: 1200px;
+  --border-radius: 14px;
+  --transition-speed: 0.3s;
 }
 
 
@@ -65,4 +96,13 @@
   --family-text: #f0e0d0;
   --family-accent: #f0a15a;
   --family-border: #5a4331;
+
+  --color-bloom: #ff6fa5;
+  --color-bloom-soft: #ff9cc2;
+  --color-bloom-glow: rgba(255, 111, 165, 0.32);
+  --color-nav-bg: rgba(15, 23, 32, 0.86);
+
+  --color-stage: #0f1c2a;
+  --color-stage-deep: #060b11;
+  --color-stage-accent: #ff9a8b;
 }

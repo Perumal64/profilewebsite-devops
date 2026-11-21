@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" role="img" aria-label="A black hole with a glowing ring in deep space">
+  <defs>
+    <radialGradient id="bg" cx="0.5" cy="0.45" r="0.8"><stop offset="0" stop-color="#150d1f"/><stop offset="1" stop-color="#020208"/></radialGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#f58a2b" stop-opacity="0"/><stop offset="0.3" stop-color="#f7b955"/><stop offset="0.5" stop-color="#fff2c9"/><stop offset="0.7" stop-color="#f7b955"/><stop offset="1" stop-color="#f58a2b" stop-opacity="0"/></linearGradient>
+    <filter id="soft" x="-20%" y="-50%" width="140%" height="200%"><feGaussianBlur stdDeviation="3"/></filter>
+  </defs>
+  <rect width="400" height="500" fill="url(#bg)"/>
+  <g fill="#ffffff">
+    <circle cx="40" cy="60" r="1.5"/><circle cx="90" cy="30" r="1"/><circle cx="150" cy="80" r="1.8"/><circle cx="260" cy="40" r="1.2"/><circle cx="340" cy="70" r="1.6"/><circle cx="370" cy="150" r="1"/>
+    <circle cx="25" cy="170" r="1.2"/><circle cx="60" cy="400" r="1.6"/><circle cx="130" cy="440" r="1"/><circle cx="330" cy="410" r="1.4"/><circle cx="380" cy="330" r="1"/><circle cx="300" cy="120" r="1"/>
+  </g>
+  <ellipse cx="200" cy="230" rx="165" ry="34" fill="none" stroke="url(#ring)" stroke-width="12" filter="url(#soft)"/>
+  <ellipse cx="200" cy="230" rx="150" ry="26" fill="none" stroke="url(#ring)" stroke-width="4"/>
+  <path d="M60 230 Q200 150 340 230" fill="none" stroke="url(#ring)" stroke-width="8" filter="url(#soft)"/>
+  <circle cx="200" cy="230" r="58" fill="#000000"/>
+  <path d="M70 230 Q200 296 330 230" fill="none" stroke="url(#ring)" stroke-width="5"/>
+  <g transform="translate(300 360) rotate(-20)" fill="#d8dde6">
+    <rect x="-18" y="-4" width="36" height="8" rx="3"/><rect x="-6" y="-14" width="12" height="28" rx="2"/>
+  </g>
+  <text x="200" y="440" text-anchor="middle" font-family="Georgia, serif" font-size="30" font-weight="700" letter-spacing="5" fill="#fff2c9">INTERSTELLAR</text>
+  <text x="200" y="468" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" letter-spacing="3" fill="#a9b4c8">LOVE IS THE ONE THING THAT TRANSCENDS TIME</text>
+</svg>
